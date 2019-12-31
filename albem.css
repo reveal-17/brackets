@@ -285,6 +285,7 @@ a {
 }
 
 .albemSilence__closeBtn {
+  cursor: pointer;
   position: absolute;
   top: 0;
   right: 0;
@@ -318,6 +319,10 @@ a {
   .albemSilence__footer {
     margin-bottom: 50px;
   }
+}
+
+.albemSilence__footer label {
+  cursor: pointer;
 }
 
 .albemSilence__footer span {
