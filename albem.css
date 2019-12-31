@@ -1,0 +1,468 @@
+@charset "UTF-8";
+/*
+レスポンシブ対応
+*/
+/*
+スタイル
+*/
+body {
+  background-color: #FCFCFC;
+  margin: 0;
+}
+
+@media screen and (max-width: 1179px) {
+  body {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 40px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.albemSilence {
+  font-family: 'Special Elite', cursive;
+}
+
+.albemSilence__animationWrapper {
+  margin-top: 100px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1179px) {
+  .albemSilence__animationWrapper {
+    margin-top: 400px;
+  }
+}
+
+.albemSilence__animation {
+  width: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .albemSilence__animation {
+    width: 70%;
+  }
+}
+
+.albemSilence__title {
+  text-align: center;
+  margin: 600px 0 100px;
+}
+
+.albemSilence__title span {
+  padding: 6px 0 2px;
+}
+
+.albemSilence__marker {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, #f88196));
+  background-image: linear-gradient(left, transparent 50%, #f88196 50%);
+  background-size: 200% .8em;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.albemSilence__marker:hover {
+  background-position: -100% .5em;
+}
+
+.albemSilence__artworks {
+  text-align: center;
+}
+
+@media screen and (min-width: 1180px) {
+  .albemSilence__artworks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.albemSilence__artwork {
+  position: relative;
+  margin-top: 600px;
+}
+
+@media screen and (min-width: 1180px) {
+  .albemSilence__artwork {
+    margin-top: 0;
+  }
+}
+
+.albemSilence__artworkImg {
+  width: 50%;
+  margin: 50px 50px 0 50px;
+  padding-bottom: 50px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.albemSilence__artworkImg:hover {
+  opacity: .7;
+}
+
+.albemSilence__artworkTitle {
+  position: absolute;
+  bottom: 12px;
+  left: 220px;
+}
+
+@media screen and (max-width: 1179px) {
+  .albemSilence__artworkTitle {
+    bottom: -50px;
+    left: 430px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .albemSilence__artworkTitle {
+    bottom: -50px;
+    left: 430px;
+  }
+}
+
+.albemSilence__border {
+  margin: 600px 0 0;
+  padding-bottom: 16px;
+  text-align: center;
+}
+
+.albemSilence__border span {
+  padding: 4px 3px 0;
+}
+
+.albemSilence__sepia {
+  background-color: rgba(249, 244, 234, 0.3);
+}
+
+.albemSilence__past {
+  margin: 0;
+  padding: 16px 0;
+  text-align: center;
+}
+
+.albemSilence__past span {
+  padding: 4px 3px 0;
+}
+
+.albemSilence__past label {
+  cursor: pointer;
+}
+
+.albemSilence__checkbox1 {
+  display: none;
+}
+
+.albemSilence__checkbox1:checked ~ .albemSilence__artworkModal {
+  display: block;
+  /*カバーを表示*/
+  opacity: .5;
+}
+
+.albemSilence__checkbox1:checked ~ .albemSilence__pastArtworks {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  /*中身を表示（右へスライド）*/
+  -webkit-box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+          box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.albemSilence__artworkModal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #F9F4EA;
+  opacity: 0;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.albemSilence__pastArtworks {
+  font-family: "Sawarabi Mincho";
+  color: #fff;
+  width: 60%;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  min-width: 720px;
+  /*最小幅（調整してください）*/
+  height: 100%;
+  background: #000;
+  /*背景色*/
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  /*滑らかに表示*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);
+  /*左に隠しておく*/
+}
+
+@media screen and (min-width: 1180px) {
+  .albemSilence__pastArtworks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 1179px) {
+  .albemSilence__pastArtworks {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .albemSilence__pastArtworks {
+    text-align: center;
+  }
+}
+
+.albemSilence__pastArtwork {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (max-width: 1179px) {
+  .albemSilence__pastArtwork {
+    margin-top: 250px;
+  }
+}
+
+.albemSilence__pastArtworkTitle1 {
+  position: absolute;
+  top: 280px;
+  left: 95px;
+}
+
+@media screen and (max-width: 1179px) {
+  .albemSilence__pastArtworkTitle1 {
+    left: 285px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .albemSilence__pastArtworkTitle1 {
+    left: 285px;
+  }
+}
+
+.albemSilence__pastArtworkTitle2 {
+  position: absolute;
+  top: 280px;
+  left: 115px;
+}
+
+@media screen and (max-width: 1179px) {
+  .albemSilence__pastArtworkTitle2 {
+    left: 325px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .albemSilence__pastArtworkTitle2 {
+    left: 325px;
+  }
+}
+
+.albemSilence__closeBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+
+.albemSilence__pastArtworkImg {
+  width: 250px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.albemSilence__pastArtworkImg:hover {
+  -webkit-filter: sepia(50%);
+  filter: sepia(50%);
+}
+
+.albemSilence__footer {
+  padding: 600px 0 20px;
+  text-align: center;
+  color: #737678;
+}
+
+@media screen and (max-width: 1179px) {
+  .albemSilence__footer {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .albemSilence__footer {
+    margin-bottom: 50px;
+  }
+}
+
+.albemSilence__footer span {
+  padding: 4px 3px 0;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, #f88196));
+  background-image: linear-gradient(left, transparent 50%, #f88196 50%);
+  background-size: 200% .8em;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.albemSilence__footer span:hover {
+  background-position: -100% .5em;
+}
+
+.albemSilence__checkbox2 {
+  display: none;
+}
+
+.albemSilence__checkbox2:checked ~ .albemSilence__introductionModal {
+  display: block;
+  /*カバーを表示*/
+  opacity: .5;
+}
+
+.albemSilence__checkbox2:checked ~ .albemSilence__introduction {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  /*中身を表示（右へスライド）*/
+  -webkit-box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+          box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.albemSilence__introductionModal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #F9F4EA;
+  opacity: 0;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.albemSilence__introduction {
+  font-family: "Sawarabi Mincho";
+  color: #fff;
+  width: 60%;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  min-width: 720px;
+  /*最小幅（調整してください）*/
+  height: 100%;
+  background: #000;
+  /*背景色*/
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  /*滑らかに表示*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);
+  /*左に隠しておく*/
+  text-align: center;
+}
+
+.albemSilence__introduction .fa-twitter {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 1179px) {
+  .albemSilence__introduction .fa-twitter {
+    font-size: 1.6em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .albemSilence__introduction .fa-twitter {
+    font-size: 1.6em;
+  }
+}
+
+.albemSilence__introName {
+  margin: 200px 0 0;
+  font-size: 32px;
+}
+
+@media screen and (max-width: 1179px) {
+  .albemSilence__introName {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .albemSilence__introName {
+    font-size: 40px;
+  }
+}
+
+.albemSilence__introDescription {
+  margin: 50px 0 0;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 1179px) {
+  .albemSilence__introDescription {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .albemSilence__introDescription {
+    font-size: 36px;
+  }
+}
+
+.js-fade-in-img {
+  opacity: 0;
+  -webkit-transform: translate(0, 50px);
+          transform: translate(0, 50px);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+@media screen and (min-width: 1180px) {
+  .js-fade-in-img:nth-of-type(2) {
+    -webkit-transition-delay: 200ms;
+            transition-delay: 200ms;
+  }
+}
+
+@media screen and (min-width: 1180px) {
+  .js-fade-in-img:nth-of-type(3) {
+    -webkit-transition-delay: 400ms;
+            transition-delay: 400ms;
+  }
+}
+
+.js-scroll-img {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+/*# sourceMappingURL=albem.css.map */
