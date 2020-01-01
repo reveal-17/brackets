@@ -140,7 +140,6 @@ a {
 
     &__border {
         margin-top: 600px;
-        padding-bottom: 16px;
         text-align: center;
 
         @include mq('tab') {
@@ -164,6 +163,14 @@ a {
         margin: 0;
         padding: 16px 0;
         text-align: center;
+
+        @include mq('tab') {
+            padding-top: 40px;
+        }
+
+        @include mq('sp') {
+            padding-top: 40px;
+        }
 
         span{
             padding: 4px 3px 0;
@@ -296,11 +303,11 @@ a {
         color: #737678;
 
         @include mq('tab') {
-            margin-bottom: 50px;
+            padding-bottom: 50px;
         }
 
         @include mq('sp') {
-            margin-bottom: 50px;
+            padding-bottom: 50px;
         }
 
         label {
