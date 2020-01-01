@@ -143,7 +143,6 @@ a {
 
 .albemSilence__border {
   margin-top: 600px;
-  padding-bottom: 16px;
   text-align: center;
 }
 
@@ -171,6 +170,18 @@ a {
   margin: 0;
   padding: 16px 0;
   text-align: center;
+}
+
+@media screen and (max-width: 1179px) {
+  .albemSilence__past {
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .albemSilence__past {
+    padding-top: 40px;
+  }
 }
 
 .albemSilence__past span {
@@ -335,13 +346,13 @@ a {
 
 @media screen and (max-width: 1179px) {
   .albemSilence__footer {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .albemSilence__footer {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
   }
 }
 
