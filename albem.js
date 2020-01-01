@@ -1,4 +1,8 @@
 $(function() {
+    /*
+        ふわっと表示
+    */
+
     function animation() {
         $('.js-fade-in-img').each(function() {
             const elemPos = $(this).offset().top;
