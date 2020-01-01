@@ -97,10 +97,22 @@ a {
   }
 }
 
+.albemSilence__artwork audio {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1179px) {
+  .albemSilence__artwork audio {
+    display: block;
+    margin: auto;
+    width: 50%;
+    margin-top: 60px;
+  }
+}
+
 .albemSilence__artworkImg {
   width: 50%;
-  margin: 50px 50px 0 50px;
-  padding-bottom: 50px;
+  margin: 50px;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
@@ -111,28 +123,40 @@ a {
 
 .albemSilence__artworkTitle {
   position: absolute;
-  bottom: 12px;
+  bottom: 80px;
   left: 220px;
 }
 
 @media screen and (max-width: 1179px) {
   .albemSilence__artworkTitle {
-    bottom: -50px;
-    left: 430px;
+    bottom: 770px;
+    left: 440px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .albemSilence__artworkTitle {
-    bottom: -50px;
-    left: 430px;
+    bottom: 770px;
+    left: 440px;
   }
 }
 
 .albemSilence__border {
-  margin: 600px 0 0;
+  margin-top: 600px;
   padding-bottom: 16px;
   text-align: center;
+}
+
+@media screen and (max-width: 1179px) {
+  .albemSilence__border {
+    margin-top: 1000px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .albemSilence__border {
+    margin-top: 1000px;
+  }
 }
 
 .albemSilence__border span {
@@ -304,7 +328,7 @@ a {
 }
 
 .albemSilence__footer {
-  padding: 600px 0 20px;
+  padding: 1000px 0 20px;
   text-align: center;
   color: #737678;
 }
