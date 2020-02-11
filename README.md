@@ -14,3 +14,5 @@
 【機能】
 使用言語：HTML,CSS(SCSS),JavaScript(jQuery)
 レスポンシブ対応
+
+参考URL：https://silence.albem.jp/
